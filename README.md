@@ -77,3 +77,14 @@ O objetivo desse desafio é avaliar a seus conhecimentos fundamentais de front e
 - Adição de processo no gulp para otimizar imagens
 
 ##### Dúvidas: [heraldo@digitalm3.com.br](mailto:heraldo@digitalm3.com.br?subject=Dúvida%20Vaga%20DEV%20-%20Digital%20M3)
+
+
+
+## Instalar o @mui material
+- npm install @mui/material @emotion/react @emotion/styled
+- npm install @mui/icons-material
+- npm install @mui/lab 
+- npm install --save styled-components
+- json-server --watch db.json
+<!-- - npm install react-router-dom@6 -->
+<!-- - npm install sass --save-dev -->
