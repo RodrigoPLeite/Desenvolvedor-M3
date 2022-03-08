@@ -3,6 +3,8 @@ import logoM3 from '../img/logo-m3.png';
 import Box from "@mui/material/Box";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+
 import Carrinho from './Carrinho';
 
 const Navbar = () => {
@@ -30,12 +32,14 @@ const Navbar = () => {
                 paddingTop: "10px",
                 paddingLeft: "20%",
             }}>
-                <Button
-                    size="large"
-                    startIcon={<ShoppingBagIcon />}
-                    onClick={() => handleClick() }
-                >
-                </Button>
+                <Link to="/carrinho" >
+                    <Button
+                        size="large"
+                        startIcon={<ShoppingBagIcon />}
+                        onClick={() => handleClick() }
+                    >
+                    </Button>
+                </Link>
             </Box>
             </Box>
         
