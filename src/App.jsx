@@ -1,23 +1,14 @@
-import Navbar from './Components/Navbar'
-import Sidebar from './Components/Sidebar'
-import './App.css'
-import Box from "@mui/material/Box";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
+import Rotas from './routes';
 
+const App = () => {
   return (
-    <div className="App">
-      <>
-      <Box sx={{
-        width: '100%',
-        borderBottom: '3px solid lightgrey',
-      }}>
-        <Navbar />
-      </Box>
-        <Sidebar />
-      </>
-    </div>
-  )
+    <BrowserRouter>
+      <Rotas />          
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

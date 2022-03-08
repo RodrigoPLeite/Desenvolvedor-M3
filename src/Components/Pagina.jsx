@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import React from 'react';
-import Carrinho from '../Components/Carrinho';
+import Carrinho from './Carrinho';
 import styled from "styled-components";
 
 const Container = styled.div`
