@@ -86,5 +86,6 @@ O objetivo desse desafio é avaliar a seus conhecimentos fundamentais de front e
 - npm install @mui/lab 
 - npm install --save styled-components
 - json-server --watch db.json
-<!-- - npm install react-router-dom@6 -->
-<!-- - npm install sass --save-dev -->
+- npm install react-router-dom@6
+
+# Email contato: rodrigopleite@yahoo.com.br

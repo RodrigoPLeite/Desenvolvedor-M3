@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import CarrinhoCompras from "../../components/CarrinhoCompras";
 
-import { Container } from './styles';
+import { Container, BotaoHome } from './styles';
 
 const Carrinho = () => {
   return (
     <Container>
       <CarrinhoCompras />
 
-      <Link to="/" >
-        <button>ir para home</button>
+      <Link style={{textDecoration: 'none'}} to="/" >
+        <BotaoHome>Voltar Para Produtos</BotaoHome>
       </Link>
     </Container>
   );

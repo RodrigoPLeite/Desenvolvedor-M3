@@ -1,23 +1,41 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import { useCarrinho } from '../../hooks/useCarrinho';
+import React, { useEffect, useState } from 'react';
+import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/Sidebar';
+import SidebarCel from '../../components/SidebarCel';
+import Api from '../../components/Api';
+import { useFiltro }  from '../../hooks/useFiltro';
 
 import { Container } from './styles';
 
 const Home = () => {
-  const { carrinho } = useCarrinho();
+  const {
+    filtrar,
+    loading,
+    primeiroCarregamento
+   } = useFiltro();
+  
+
+  useEffect(() => {
+    Api.get(`products`)
+      .then(res => {
+        loading(res.data);
+      })
+  }, []);
+
+  useEffect(() => {
+    filtrar();
+  }, [primeiroCarregamento]);
 
   return (
     <Container>
-        {carrinho.map(item => {
-          console.log("Tela Home", item)
-        })}
-        <h1>Home</h1>;
-
-        <Link to="/carrinho" >
-          <button>ir para carrinho</button>
-        </Link>
-     </Container>
+      <Navbar />
+      <div className="mobile">
+        <SidebarCel />
+      </div>
+      <div className="desktop">
+        <Sidebar />
+      </div>
+    </Container>
   );
 }
 
